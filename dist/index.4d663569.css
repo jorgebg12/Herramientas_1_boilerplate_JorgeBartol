@@ -11,7 +11,8 @@
 
 * {
   box-sizing: border-box;
-  color: #fff;
+  color: var(--silver-color);
+  font-family: var(--normal-font);
   margin: 0;
   padding: 0;
 }
@@ -30,6 +31,7 @@ body {
 footer {
   background-color: var(--black-background);
   padding: 2rem;
+  font-size: .8rem;
 }
 
 h1 {
@@ -38,8 +40,22 @@ h1 {
   color: var(--silver-color);
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-family: var(--title-font);
+  color: var(--silver-color);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -56,12 +72,61 @@ ul {
   }
 }
 
+.black-bg {
+  backdrop-filter: brightness(5%);
+}
+
 .contrast {
   color: var(--contrast-color);
 }
 
-.home {
-  background-image: url("chorzow-sunday-2470.f0929f17.jpg");
+.flex-col {
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+}
+
+.logo-header {
+  max-width: 100%;
+}
+
+.header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+}
+
+.header .home-btn {
+  max-width: 30%;
+}
+
+.header-nav {
+  flex-direction: row;
+  display: flex;
+}
+
+.header-nav li {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.header-nav li:nth-child(2n) {
+  border-left: 2px solid var(--silver-color);
+  border-right: 2px solid var(--silver-color);
+}
+
+.header-nav a {
+  font-size: .8rem;
+  font-family: var(--title-font);
+}
+
+header .home {
+  background-image: url("bg-1.abceb86e.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,37 +137,110 @@ ul {
   height: auto;
 }
 
-.logo-header {
-  max-width: 100%;
-}
-
 .home-nav {
   justify-content: space-around;
   gap: 3rem;
+  padding: .5rem;
   display: flex;
 }
 
-.home-nav li {
+.home-nav a {
   font-size: 1.5rem;
   font-family: var(--title-font);
   color: var(--contrast-color);
-  padding: .5rem;
-  text-decoration: underline overline 2px;
+  text-decoration: underline overline 3px;
 }
 
-main .container {
-  text-align: center;
+.home main .container {
   backdrop-filter: brightness(70%);
   flex-direction: column;
-  align-items: center;
   gap: 1.5rem;
+  min-height: 90vh;
   padding-top: 3rem;
   padding-bottom: 5rem;
   display: flex;
 }
 
-.flex-body {
+.home .container {
+  text-align: center;
+  align-items: center;
+}
+
+.category-bg {
+  background-image: url("bg-2.53305bb9.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.member-container {
+  display: inherit;
+  text-align: center;
   flex-direction: column;
-  display: flex;
+  gap: 2rem;
+}
+
+.member-card {
+  grid-template: "image name" 20vh
+                 "image rol" 20vh
+                 / 1fr 1fr;
+  display: grid;
+}
+
+.member-card:not(:last-child) {
+  border-bottom: 2px solid var(--contrast-color);
+  border-image: linear-gradient(to right, #0000, var(--contrast-color), #0000);
+  border-image-slice: 1;
+  padding-bottom: 1rem;
+}
+
+.member-img {
+  object-fit: cover;
+  grid-area: image;
+  width: 100%;
+  height: 100%;
+}
+
+.member-name {
+  font-size: 2rem;
+  font-family: var(--title-font);
+  color: var(--contrast-color);
+  grid-area: name;
+  align-self: end;
+}
+
+.memeber-rol {
+  grid-area: rol;
+  align-self: start;
+}
+
+.member-card:nth-child(2n) {
+  grid-template-areas: "name image"
+                       "rol image";
+}
+
+.iframe-container {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.responsive-iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.info-link {
+  text-align: center;
+  font-family: var(--title-font);
+  background-color: var(--contrast-color);
+  border-radius: 5px;
+  align-self: center;
+  width: 30%;
+  padding: 1rem;
 }
 /*# sourceMappingURL=index.4d663569.css.map */
