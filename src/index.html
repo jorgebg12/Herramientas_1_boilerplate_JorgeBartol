@@ -6,8 +6,23 @@
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="app.js"></script>
   </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <include src="header.html"></include>
+  <body class="home flex-body">
+
+    <include src="partial/header.html"></include>
+    <main>
+      <div class="container">
+        <img class="logo-img" src="assets/Rammstein_logo_2.svg" alt="Rammstein logo">
+        <h1>Nueva gira Europea 2024, Consigue ya tus <a href="#">entradas</a></h1>
+        <p>Conoce más sobre el grupo</p>
+        <ul class="home-nav">
+          <li><a href=""></a>Categoría</li>
+          <li><a href=""></a>Presentación</li>
+          <li><a href=""></a>Enlace</li>
+        </ul>
+      </div>
+    </main>
+    <include src="partial/footer.html"></include>
+
   </body>
+
 </html>

@@ -1,11 +1,108 @@
-h1 {
-  color: #ff69b4;
-  font-family: cursive;
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap";
+:root {
+  --black-background: #101010;
+  --soft-black-background: #181818;
+  --contrast-color: #e22e2e;
+  --gold-color: #e6c619;
+  --silver-color: #e3e4e5;
+  --title-font: "Rubik Mono One", monospace;
+  --normal-font: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--black-background);
+  text-align: center;
 }
 
 body {
   color: #1f1f1f;
-  background: linear-gradient(#bada55, #c0ffee);
+  background-color: var(--soft-black-background);
   height: 100vh;
+}
+
+footer {
+  background-color: var(--black-background);
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: var(--title-font);
+  color: var(--silver-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (width <= 1000px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.contrast {
+  color: var(--contrast-color);
+}
+
+.home {
+  background-image: url("chorzow-sunday-2470.f0929f17.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo-img {
+  max-width: 30%;
+  height: auto;
+}
+
+.logo-header {
+  max-width: 100%;
+}
+
+.home-nav {
+  justify-content: space-around;
+  gap: 3rem;
+  display: flex;
+}
+
+.home-nav li {
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  color: var(--contrast-color);
+  padding: .5rem;
+  text-decoration: underline overline 2px;
+}
+
+main .container {
+  text-align: center;
+  backdrop-filter: brightness(70%);
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  display: flex;
+}
+
+.flex-body {
+  flex-direction: column;
+  display: flex;
 }
 /*# sourceMappingURL=index.4d663569.css.map */

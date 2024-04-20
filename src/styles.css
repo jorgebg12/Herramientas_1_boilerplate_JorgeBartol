@@ -1,9 +1,144 @@
-h1 {
-    color: hotpink;
-    font-family: cursive;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap');
+:root{
+  --black-background: #101010;
+  --soft-black-background: #181818;
+  --contrast-color: #e22e2e;
+  --gold-color : #e6c619;
+  --silver-color: #e3e4e5;
+
+  --title-font :  "Rubik Mono One", monospace;
+  --normal-font: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+
+
+
+
+/*********************
+ General styles
+*********************/
+
+header{
+  background-color: var(--black-background);
+  text-align: center;
+}
 body {
-    height: 100vh;
-    color: #1f1f1f;
-    background: linear-gradient(to bottom, #bada55, #c0ffee);
+  height: 100vh;
+  color: #1f1f1f;
+  background-color: var(--soft-black-background);
+}
+
+footer{
+  padding: 2rem;
+  background-color: var(--black-background);
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: var(--title-font);
+  color: var(--silver-color)
+}
+
+ul {
+  
+  list-style-type: none;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 60%;
+}
+
+@media (max-width: 1000px) {
+  .container {
+      width: 90%;
   }
+}
+
+.contrast{
+  color: var(--contrast-color);
+}
+
+
+
+
+
+/*********************
+ Home
+*********************/
+
+.home { 
+  background-image: url(assets/chorzow-sunday-2470.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.logo-img {
+  max-width: 30%;
+  height: auto;
+}
+
+.logo-header {
+  max-width: 100%;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.home-nav li {
+  padding: 0.5rem;
+  text-decoration: underline overline;
+  text-decoration-thickness: 2px;
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  color: var(--contrast-color);
+
+}
+
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  backdrop-filter: brightness(70%);
+
+}
+
+
+/*********************
+Body flex distribution
+*********************/
+
+.flex-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .flex-body header {
+  max-height: 15vh;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-body main {
+  min-height: 85vh;
+  flex: 1;
+} */
