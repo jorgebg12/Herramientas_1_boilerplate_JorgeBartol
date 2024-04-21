@@ -8083,7 +8083,6 @@
   --black-background: #101010;
   --soft-black-background: #181818;
   --contrast-color: #e22e2e;
-  --gold-color: #e6c619;
   --silver-color: #e3e4e5;
   --title-font: "Rubik Mono One", monospace;
   --normal-font: "Montserrat", sans-serif;
@@ -8150,18 +8149,8 @@ a {
   padding-right: 1rem;
 }
 
-@media (width <= 1000px) {
-  .container {
-    width: 90%;
-  }
-}
-
 .black-bg {
   backdrop-filter: brightness(5%);
-}
-
-.contrast {
-  color: var(--contrast-color);
 }
 
 .flex-col {
@@ -8173,6 +8162,36 @@ a {
 .padding-y {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+@media (width <= 1400px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (width <= 1000px) {
+  .container {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
 }
 
 .logo-header {
@@ -8197,19 +8216,46 @@ a {
   display: flex;
 }
 
-.header-nav li {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.header-nav li:nth-child(2n) {
-  border-left: 2px solid var(--silver-color);
-  border-right: 2px solid var(--silver-color);
-}
-
 .header-nav a {
   font-size: .8rem;
   font-family: var(--title-font);
+}
+
+@media (width >= 1000px) {
+  .header-nav li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-nav li:nth-child(2n) {
+    border-left: 2px solid var(--silver-color);
+    border-right: 2px solid var(--silver-color);
+  }
+}
+
+@media (width <= 1000px) {
+  .header {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  .header-nav {
+    flex-direction: column;
+  }
+
+  .header-nav li {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+  }
+
+  .header-nav li:nth-child(2n) {
+    border-top: 2px solid var(--silver-color);
+    border-bottom: 2px solid var(--silver-color);
+  }
+
+  .header .home-btn {
+    max-width: 80%;
+  }
 }
 
 .home {
@@ -8232,7 +8278,6 @@ a {
 }
 
 .home-nav a {
-  font-size: 1.5rem;
   font-family: var(--title-font);
   color: var(--contrast-color);
   text-decoration: underline overline 3px;
@@ -8240,17 +8285,29 @@ a {
 
 .home main .container {
   backdrop-filter: brightness(70%);
-  flex-direction: column;
-  gap: 1.5rem;
   min-height: 90vh;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  display: flex;
 }
 
 .home .container {
   text-align: center;
   align-items: center;
+}
+
+@media (width >= 1000px) {
+  .home-nav a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (width <= 1000px) {
+  .home-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home-nav a {
+    font-size: 1.2rem;
+  }
 }
 
 .category-bg {
@@ -8302,11 +8359,6 @@ a {
   align-self: start;
 }
 
-.member-card:nth-child(2n) {
-  grid-template-areas: "name image"
-                       "rol image";
-}
-
 .iframe-container {
   width: 100%;
   padding-top: 56.25%;
@@ -8329,6 +8381,23 @@ a {
   align-self: center;
   width: 30%;
   padding: 1rem;
+}
+
+@media (width >= 1000px) {
+  .member-card:nth-child(2n) {
+    grid-template-areas: "name image"
+                         "rol image";
+  }
+}
+
+@media (width <= 1000px) {
+  .member-card {
+    grid-template: "image" 40vh
+                   "name" 10vh
+                   "rol" 10vh
+                   / 1fr;
+    display: grid;
+  }
 }
 
 .detail-bg {
@@ -8434,6 +8503,22 @@ button {
   font-size: 1.1rem;
 }
 
+@media (width <= 1000px) {
+  form {
+    padding-left: 0;
+  }
+
+  input[type="email"], select {
+    width: 90%;
+  }
+}
+
+@media (width <= 550px) {
+  table {
+    font-size: .8rem;
+  }
+}
+
 .presentation-bg {
   background-image: url("bg-4.ce3bff37.jpg");
   background-position: bottom;
@@ -8442,15 +8527,19 @@ button {
   background-attachment: fixed;
 }
 
+.section {
+  color: var(--contrast-color);
+}
+
 .video-container {
+  flex-flow: wrap;
+  justify-content: space-around;
   display: flex;
 }
 
-.video-container .responsive-iframe {
-  width: 98%;
-  height: 50%;
-  position: absolute;
-  inset: 0;
+.video-container .iframe-container {
+  flex-basis: 48%;
+  align-items: center;
 }
 
 .links-bg {
@@ -8469,5 +8558,12 @@ button {
 .source-web {
   font-size: 1.5rem;
   text-decoration: underline;
+}
+
+@media (width <= 1000px) {
+  .source-web {
+    font-size: 1.1rem;
+    text-decoration: underline;
+  }
 }
 /*# sourceMappingURL=index.4d663569.css.map */

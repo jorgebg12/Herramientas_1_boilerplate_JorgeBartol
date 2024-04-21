@@ -4,7 +4,6 @@
   --black-background: #101010;
   --soft-black-background: #181818;
   --contrast-color: #e22e2e;
-  --gold-color : #e6c619;
   --silver-color: #e3e4e5;
 
   --title-font :  "Rubik Mono One", monospace;
@@ -27,7 +26,7 @@
  General styles
 *********************/
 
-header{
+header {
   background-color: var(--black-background);
   text-align: center;
 }
@@ -37,7 +36,7 @@ body {
   background-color: var(--soft-black-background);
 }
 
-footer{
+footer {
   padding: 2rem;
   font-size: 0.8rem;
   background-color: var(--black-background);
@@ -49,7 +48,7 @@ h1 {
   color: var(--silver-color)
 }
 
-h2{
+h2 {
   font-size: 2.5rem;
   font-family: var(--title-font);
   color: var(--silver-color)
@@ -59,7 +58,7 @@ h3 {
   font-size: 1.6rem;
 }
 
-p{
+p {
   font-size: 1.2rem;
 }
 
@@ -80,18 +79,8 @@ a {
   width: 60%;
 }
 
-@media (max-width: 1000px) {
-  .container {
-      width: 90%;
-  }
-}
-
-.black-bg{
-  
+.black-bg {
   backdrop-filter: brightness(5%);
-}
-.contrast{
-  color: var(--contrast-color);
 }
 
 .flex-col {
@@ -104,6 +93,41 @@ a {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+
+@media (max-width: 1400px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3{
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+
 /*********************
  Header
 *********************/
@@ -121,7 +145,7 @@ a {
   padding-right: 2rem;
 }
 
-.header .home-btn{
+.header .home-btn {
   max-width: 30%;
 }
 
@@ -130,20 +154,50 @@ a {
   flex-direction: row;
 }
 
-.header-nav li {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.header-nav li:nth-child(even){
-  border-left: 2px solid var(--silver-color);
-  border-right: 2px solid var(--silver-color);
-}
-
 .header-nav a {
   font-size: 0.8rem;
   font-family: var(--title-font);
 }
+
+@media (min-width :  1000px) {
+  .header-nav li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .header-nav li:nth-child(even){
+    border-left: 2px solid var(--silver-color);
+    border-right: 2px solid var(--silver-color);
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  .header-nav {
+    flex-direction: column;
+  }
+
+  .header-nav li {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .header-nav li:nth-child(even){
+    border-top: 2px solid var(--silver-color);
+    border-bottom: 2px solid var(--silver-color);
+  }
+  .header .home-btn{
+    max-width: 80%;
+  }
+}
+
+
+
+
 
 /*********************
  Home
@@ -172,27 +226,44 @@ a {
 .home-nav a {
   text-decoration: underline overline;
   text-decoration-thickness: 3px;
-  font-size: 1.5rem;
   font-family: var(--title-font);
   color: var(--contrast-color);
 
 }
 
- .home main .container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+.home main .container {
   backdrop-filter: brightness(70%);
   min-height: 90vh;
-
 }
+
 .home .container {
-  
   align-items: center;
   text-align: center;
 }
+
+@media  (min-width: 1000px){
+
+  .home-nav a {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media  (max-width: 1000px){
+
+  .home-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .home-nav a {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
 
 /*********************
 Category
@@ -206,12 +277,13 @@ Category
   background-attachment: fixed;
 }
 
-.member-container{
+.member-container {
   display: inherit;
   flex-direction: column;
   text-align: center;
   gap: 2rem;
 }
+
 .member-card {
   display: grid;
   grid-template-rows: 20vh 20vh;
@@ -220,12 +292,14 @@ Category
   'image name'
   'image rol';
 }
-.member-card:not(:last-child){
+
+.member-card:not(:last-child) {
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--contrast-color);
   border-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--contrast-color), rgba(0, 0, 0, 0));
   border-image-slice: 1;
 }
+
 .member-img {
   width: 100%;
   height: 100%;
@@ -233,6 +307,7 @@ Category
     
   grid-area: image;
 }
+
 .member-name {
   grid-area: name;
   font-size: 2rem;
@@ -240,15 +315,10 @@ Category
   align-self: end;
   color: var(--contrast-color);
 }
+
 .memeber-rol {
   grid-area: rol;
   align-self: start;
-}
-
-.member-card:nth-child(even) {
-  grid-template-areas: 
-  'name image '
-  'rol image';
 }
 
 .iframe-container {
@@ -278,6 +348,30 @@ Category
   border-radius: 5px;
 }
 
+@media (min-width: 1000px) {
+
+  .member-card:nth-child(even) {
+    grid-template-areas: 
+    'name image '
+    'rol image';
+  }
+}
+
+@media (max-width: 1000px) {
+  .member-card {
+    display: grid;
+    grid-template-rows: 40vh 10vh 10vh;
+    grid-template-columns:  1fr;
+    grid-template-areas: 
+    'image'
+    'name'
+    'rol';
+  }
+}
+
+
+
+
 
 /*********************
 Detail
@@ -305,30 +399,31 @@ caption {
   margin-bottom: 2rem;
 }
 
-thead th{
+thead th {
   text-align: left;
   padding: 0.5rem;
   border-bottom: 3px solid;
   border-top: 3px solid;
 }
 
-tbody td{
+tbody td {
   border-bottom: 2px solid;
 }
 
 th:nth-child(2),
-td:nth-child(2){
+td:nth-child(2) {
   text-align: right;
 }
 
 th:nth-child(3),
-td:nth-child(3){
+td:nth-child(3) {
   text-align: center;
 }
 
 td {
   padding: 0.5rem;
 }
+
 td a {
   width: 100%;
 }
@@ -363,7 +458,7 @@ form {
 }
 
 label {
-  display: block
+  display: block;
 }
 
 input[type="email"],
@@ -391,6 +486,28 @@ button {
   font-size: 1.1rem;
 }
 
+@media (max-width: 1000px) {
+
+  form {
+    padding-left: 0rem;
+  }
+
+  input[type="email"],
+  select {
+  width: 90%;
+  }
+}
+
+@media (max-width: 550px){
+  table {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
 /*********************
 Presentacion
 *********************/
@@ -403,19 +520,25 @@ Presentacion
   background-attachment: fixed;
 }
 
-.video-container {
-  display: flex;
+.section {
+  color: var(--contrast-color);
 }
 
-.video-container .responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 98%;
-  height: 50%;
+.video-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
+.video-container .iframe-container {
+  align-items: center;
+  flex-basis: 48%;
+}
+
+
+
+
 
 /*********************
 Enlaces
@@ -437,4 +560,12 @@ Enlaces
 .source-web {
   font-size: 1.5rem;
   text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+
+  .source-web {
+    font-size: 1.1rem;
+    text-decoration: underline;
+  }
 }
