@@ -8084,6 +8084,7 @@
   --soft-black-background: #181818;
   --contrast-color: #e22e2e;
   --silver-color: #e3e4e5;
+  --golden-color: #daa520;
   --title-font: "Rubik Mono One", monospace;
   --normal-font: "Montserrat", sans-serif;
 }
@@ -8162,6 +8163,10 @@ a {
 .padding-y {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.padding-top {
+  padding-top: 2rem;
 }
 
 @media (width <= 1400px) {
@@ -8263,24 +8268,12 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .logo-img {
   max-width: 30%;
   height: auto;
-}
-
-.home-nav {
-  justify-content: space-around;
-  gap: 3rem;
-  padding: .5rem;
-  display: flex;
-}
-
-.home-nav a {
-  font-family: var(--title-font);
-  color: var(--contrast-color);
-  text-decoration: underline overline 3px;
 }
 
 .home main .container {
@@ -8291,6 +8284,65 @@ a {
 .home .container {
   text-align: center;
   align-items: center;
+}
+
+.home-nav {
+  z-index: 2;
+  justify-content: space-around;
+  gap: 3rem;
+  padding: .5rem;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 30%);
+}
+
+.home-link {
+  font-family: var(--title-font);
+  color: var(--contrast-color);
+  text-decoration: underline overline 3px;
+  transition: font-size .1s ease-in-out, color .1s ease-in-out;
+}
+
+.home-link:hover {
+  color: var(--golden-color);
+  font-size: 2rem;
+}
+
+#clip-home-container {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+}
+
+#cliping-img {
+  background-blend-mode: luminosity;
+  clip-path: polygon(10% 0%, 30% 0%, 50% 100%);
+  background-color: #d0e3f0;
+  background-image: url("bg-2.53305bb9.jpg"), none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+  width: 100%;
+  height: 100%;
+  mask-image: linear-gradient(to top, #ffffffe6 60%, #0000 90%);
+}
+
+@keyframes clip {
+  0% {
+    clip-path: polygon(0% 0%, 20% 0%, 50% 100%);
+  }
+
+  50% {
+    clip-path: polygon(80% 0%, 100% 0%, 50% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 20% 0%, 50% 100%);
+  }
 }
 
 @media (width >= 1000px) {

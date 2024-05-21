@@ -9,17 +9,26 @@
   <body class="home">
 
     <include src="partial/header-home.html"></include>
+
     <main>
-      <div class="container  padding-y flex-col"">
+
+      <div class="container  padding-top flex-col"">
         <img class="logo-img" src="assets/Rammstein_logo_2.svg" alt="Rammstein logo">
         <h1>Nueva gira Europea 2024, Consigue ya tus entradas</h1>
-        <ul class="home-nav">
-          <li><a href="category.html">Categoría</a></li>
-          <li><a href="presentation.html">Presentación</a></li>
-          <li><a href="links.html">Enlace</a></li>
-        </ul>
+        <div id="clip-home-container">
+          
+          <ul class="home-nav">
+            <li><a class="home-link" href="category.html">Categoría</a></li>
+            <li><a class="home-link" href="presentation.html">Presentación</a></li>
+            <li><a class="home-link" href="links.html">Enlace</a></li>
+          </ul>
+          <div id="cliping-img"></div>
+         
+        </div>
       </div>
+
     </main>
+    
     <include src="partial/footer.html"></include>
 
   </body>
