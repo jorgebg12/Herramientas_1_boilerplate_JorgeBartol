@@ -9,6 +9,15 @@
 
   --title-font :  "Rubik Mono One", monospace;
   --normal-font: "Montserrat", sans-serif;
+  --table-location-image : url('/src/assets/europa-base.png');
+  --table-location-londres : url('/src/assets/europa-londres.png');
+  --table-location-paris : url('/src/assets/europa-paris.png');
+  --table-location-berlin : url('/src/assets/europa-berlin.png');
+  --table-location-madrid : url('/src/assets/europa-madrid.png');
+  --table-location-roma : url('/src/assets/europa-roma.png');
+  --table-location-amsterdam : url('/src/assets/europa-amsterdam.png');
+  --table-location-viena : url('/src/assets/europa-viena.png');
+  --table-location-praga : url('/src/assets/europa-praga.png');
 }
 
 * {
@@ -70,6 +79,12 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+picture {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -134,7 +149,7 @@ a {
 
 
 /*********************
- Header
+ Header / footer
 *********************/
 
 .logo-header {
@@ -204,6 +219,10 @@ a {
   .footer {
     flex-direction: column;
     padding-bottom: 1rem;
+  }
+
+  .footer {
+    gap: 3rem;
   }
 
   .secondary-btns {
@@ -469,9 +488,29 @@ Detail
   overflow-x: auto;
 }
 
-table {
-  border-collapse: collapse; 
+.title-bg {
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  text-align: center;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+tbody {
+
+
+  background-image: var(--table-location-image);
+  background-blend-mode:luminosity;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 80%;
+  background-color: rgba(70, 70, 70, 1);
+  background-blend-mode: multiply;
+}
+
 
 caption {
   text-align: left;
@@ -511,6 +550,38 @@ td a {
 tfoot {
   color: gray;
   font-size: 0.9rem;
+}
+
+tbody:has(.londres:hover){
+  background-image: var(--table-location-londres);
+}
+
+tbody:has(.paris:hover){
+  background-image: var(--table-location-paris);
+}
+
+tbody:has(.berlin:hover){
+  background-image: var(--table-location-berlin);
+}
+
+tbody:has(.madrid:hover){
+  background-image: var(--table-location-madrid);
+}
+
+tbody:has(.roma:hover){
+  background-image: var(--table-location-roma);
+}
+
+tbody:has(.amsterdam:hover){
+  background-image: var(--table-location-amsterdam);
+}
+
+tbody:has(.viena:hover){
+  background-image: var(--table-location-viena);
+}
+
+tbody:has(.praga:hover){
+  background-image: var(--table-location-praga);
 }
 
 .un-aviable,

@@ -8087,6 +8087,15 @@
   --golden-color: #daa520;
   --title-font: "Rubik Mono One", monospace;
   --normal-font: "Montserrat", sans-serif;
+  --table-location-image: url("europa-base.800bed5f.png");
+  --table-location-londres: url("europa-londres.ed867775.png");
+  --table-location-paris: url("europa-paris.10267ea2.png");
+  --table-location-berlin: url("europa-berlin.eb645700.png");
+  --table-location-madrid: url("europa-madrid.2afaac24.png");
+  --table-location-roma: url("europa-roma.40be55b6.png");
+  --table-location-amsterdam: url("europa-amsterdam.cc2a9960.png");
+  --table-location-viena: url("europa-viena.5e1a480a.png");
+  --table-location-praga: url("europa-praga.4c683094.png");
 }
 
 * {
@@ -8140,6 +8149,12 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+picture {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container {
@@ -8259,6 +8274,10 @@ a {
     padding-bottom: 1rem;
   }
 
+  .footer {
+    gap: 3rem;
+  }
+
   .secondary-btns {
     flex-direction: row-reverse;
     gap: 3rem;
@@ -8283,7 +8302,7 @@ a {
 }
 
 .home {
-  background-image: url("bg-1.abceb86e.jpg");
+  background-image: url("bg-1.a031ffd1.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8338,7 +8357,7 @@ a {
   background-blend-mode: luminosity;
   clip-path: polygon(10% 0%, 30% 0%, 50% 100%);
   background-color: #d0e3f0;
-  background-image: url("bg-2.53305bb9.jpg"), none;
+  background-image: url("bg-2.93d898de.jpeg"), none;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8382,7 +8401,7 @@ a {
 }
 
 .category-bg {
-  background-image: url("bg-2.53305bb9.jpg");
+  background-image: url("bg-2.93d898de.jpeg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8472,7 +8491,7 @@ a {
 }
 
 .detail-bg {
-  background-image: url("bg-3.30be8d59.jpg");
+  background-image: url("bg-3.7c1a7ac9.jpeg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8483,8 +8502,25 @@ a {
   overflow-x: auto;
 }
 
+.title-bg {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
 table {
   border-collapse: collapse;
+}
+
+tbody {
+  background-image: var(--table-location-image);
+  background-blend-mode: luminosity;
+  background-blend-mode: multiply;
+  background-color: #464646;
+  background-position: 50% 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 caption {
@@ -8523,6 +8559,38 @@ td a {
 tfoot {
   color: gray;
   font-size: .9rem;
+}
+
+tbody:has(.londres:hover) {
+  background-image: var(--table-location-londres);
+}
+
+tbody:has(.paris:hover) {
+  background-image: var(--table-location-paris);
+}
+
+tbody:has(.berlin:hover) {
+  background-image: var(--table-location-berlin);
+}
+
+tbody:has(.madrid:hover) {
+  background-image: var(--table-location-madrid);
+}
+
+tbody:has(.roma:hover) {
+  background-image: var(--table-location-roma);
+}
+
+tbody:has(.amsterdam:hover) {
+  background-image: var(--table-location-amsterdam);
+}
+
+tbody:has(.viena:hover) {
+  background-image: var(--table-location-viena);
+}
+
+tbody:has(.praga:hover) {
+  background-image: var(--table-location-praga);
 }
 
 .un-aviable, .fa-link-slash {
@@ -8591,7 +8659,7 @@ button {
 }
 
 .presentation-bg {
-  background-image: url("bg-4.ce3bff37.jpg");
+  background-image: url("bg-4.b7279496.jpeg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8614,7 +8682,7 @@ button {
 }
 
 .links-bg {
-  background-image: url("bg-credit.1109890b.jpg");
+  background-image: url("bg-credit.3bedb161.jpeg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
