@@ -437,7 +437,10 @@ Category
   height: 100%;
 }
 
-.info-link {
+
+.info-link { 
+  display: block;
+  position: relative;
   width: 30%;
   padding: 1rem;
   align-self: center;
@@ -445,6 +448,24 @@ Category
   font-family: var(--title-font);
   background-color: var(--contrast-color);
   border-radius: 5px;
+  overflow: hidden;
+  transition: margin-top 0.1s linear, overflow 0.3s ease-in;
+}
+
+.info-img {
+  position: absolute;
+  width: 100%;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+  transform: translateY(-60%);
+}
+
+.info-link:hover {
+  
+  margin-top: 5rem;
+  overflow: visible;
 }
 
 @media (min-width: 1000px) {
@@ -540,7 +561,7 @@ td:nth-child(3) {
 }
 
 td {
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 td a {

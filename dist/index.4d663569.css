@@ -8471,6 +8471,25 @@ picture {
   align-self: center;
   width: 30%;
   padding: 1rem;
+  transition: margin-top .1s linear, overflow .3s ease-in;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-img {
+  z-index: -1;
+  border-radius: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-60%);
+}
+
+.info-link:hover {
+  margin-top: 5rem;
+  overflow: visible;
 }
 
 @media (width >= 1000px) {
@@ -8549,7 +8568,7 @@ th:nth-child(3), td:nth-child(3) {
 }
 
 td {
-  padding: .5rem;
+  padding: 1rem;
 }
 
 td a {
