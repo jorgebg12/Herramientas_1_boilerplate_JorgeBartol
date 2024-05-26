@@ -431,8 +431,6 @@ Category
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -704,11 +702,46 @@ Presentacion
 }
 
 .video-container .iframe-container {
-  align-items: center;
-  flex-basis: 48%;
+  position: relative;
+  padding-bottom: 56.25%; 
+  padding-top: 25px;
+  max-width: 40%;
+}
+
+#youtube-logo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  animation: rotateOpacity 3s infinite;
+}
+
+@keyframes rotateOpacity {
+  0% { 
+    opacity: 0.3;
+   }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    
+    opacity: 0.3;
+  }
 }
 
 
+@media (max-width: 1000px) {
+  
+  .video-container {
+    flex-direction: column;
+  }
+  
+  .video-container .iframe-container {
+  
+    max-width: 100%;
+  }
+}
 
 
 

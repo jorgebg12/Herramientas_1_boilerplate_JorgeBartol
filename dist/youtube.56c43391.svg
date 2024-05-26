@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="143.68158mm" height="89.24424mm" viewBox="0 0 143.68158 89.24424" version="1.1" id="svg1" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" sodipodi:docname="youtube.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" inkscape:zoom="1.0449705" inkscape:cx="271.778" inkscape:cy="398.57583" inkscape:window-width="2560" inkscape:window-height="1369" inkscape:window-x="1912" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer1"></sodipodi:namedview>
+  <defs id="defs1"></defs>
+  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(-33.15921,-103.87788)">
+    <rect style="fill: red; fill-opacity: 1; stroke: red; stroke-width: 10.5px; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: none; stroke-opacity: 1; paint-order: markers stroke fill" id="yt-background" width="133.18158" height="78.74424" x="38.40921" y="109.12788" rx="16.348831" ry="20.4">
+       <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"></animate>
+      </rect>
+    <path sodipodi:type="star" style="fill: #fff; fill-opacity: 1; stroke: #fff; stroke-width: 28.1943px; stroke-linecap: square; stroke-linejoin: miter; stroke-dasharray: none; stroke-opacity: 1; paint-order: normal" id="yt-play" inkscape:flatsided="true" sodipodi:sides="3" sodipodi:cx="67.603577" sodipodi:cy="59.754475" sodipodi:r1="48.440746" sodipodi:r2="24.220373" sodipodi:arg1="0" sodipodi:arg2="1.0471976" inkscape:rounded="0" inkscape:randomized="0" d="m 116.04432,59.754475 -72.661116,41.950915 0,-83.901832 z" inkscape:transform-center-x="-4.816752" transform="matrix(0.39774388,0,0,0.34869823,70.490811,127.66372)">
+       <animate attributeName="tr" values="1;0.5;1" dur="2s" repeatCount="indefinite"></animate>
+       </path>
+  </g>
+</svg>

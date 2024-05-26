@@ -8460,7 +8460,8 @@ picture {
   width: 100%;
   height: 100%;
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
 }
 
 .info-link {
@@ -8696,8 +8697,42 @@ button {
 }
 
 .video-container .iframe-container {
-  flex-basis: 48%;
-  align-items: center;
+  max-width: 40%;
+  padding-top: 25px;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+#youtube-logo {
+  max-width: 100px;
+  max-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: 3s infinite rotateOpacity;
+}
+
+@keyframes rotateOpacity {
+  0% {
+    opacity: .3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .3;
+  }
+}
+
+@media (width <= 1000px) {
+  .video-container {
+    flex-direction: column;
+  }
+
+  .video-container .iframe-container {
+    max-width: 100%;
+  }
 }
 
 .links-bg {
