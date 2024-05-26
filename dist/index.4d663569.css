@@ -8431,6 +8431,7 @@ picture {
 
 .member-img {
   object-fit: cover;
+  object-position: top center;
   grid-area: image;
   width: 100%;
   height: 100%;
