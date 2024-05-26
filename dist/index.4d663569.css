@@ -8087,15 +8087,15 @@
   --golden-color: #daa520;
   --title-font: "Rubik Mono One", monospace;
   --normal-font: "Montserrat", sans-serif;
-  --table-location-image: url("europa-base.800bed5f.png");
-  --table-location-londres: url("europa-londres.ed867775.png");
-  --table-location-paris: url("europa-paris.10267ea2.png");
-  --table-location-berlin: url("europa-berlin.eb645700.png");
-  --table-location-madrid: url("europa-madrid.2afaac24.png");
-  --table-location-roma: url("europa-roma.40be55b6.png");
-  --table-location-amsterdam: url("europa-amsterdam.cc2a9960.png");
-  --table-location-viena: url("europa-viena.5e1a480a.png");
-  --table-location-praga: url("europa-praga.4c683094.png");
+  --table-location-image: url("europa-base.14a1574b.webp");
+  --table-location-londres: url("europa-londres.14b64062.webp");
+  --table-location-paris: url("europa-paris.0f9b70f3.webp");
+  --table-location-berlin: url("europa-berlin.61b80b25.webp");
+  --table-location-madrid: url("europa-madrid.90477213.webp");
+  --table-location-roma: url("europa-roma.ff982b4a.webp");
+  --table-location-amsterdam: url("europa-amsterdam.97683de6.webp");
+  --table-location-viena: url("europa-viena.9953b723.webp");
+  --table-location-praga: url("europa-praga.e036a7aa.webp");
 }
 
 * {
