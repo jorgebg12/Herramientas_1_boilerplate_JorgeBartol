@@ -456,7 +456,7 @@ Category
   top: 0;
   left: 0;
   z-index: -1; 
-  transform: translateY(-60%);
+  transform: translateY(-70%);
 }
 
 .info-link:hover {

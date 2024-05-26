@@ -8486,7 +8486,7 @@ picture {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-60%);
+  transform: translateY(-70%);
 }
 
 .info-link:hover {
